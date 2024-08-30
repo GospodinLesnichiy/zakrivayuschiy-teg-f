@@ -13,8 +13,436 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 
 */
-
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-color: var(--background-color);
+  background-attachment: fixed;
+  font-family: var(--font-regular), arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.points {
+  background-image: var(--background-gradient-image);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid var(--border-color);
+  color: var(--font-color);
+  font-family: var(--font-pixel_style), arial, sans-serif;
+  background-color: var(--background-color);
+  margin-top: 102px;
+  margin-bottom: 102px;
+  width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+  min-height: 367px;
+}
+
+.article {
+  position: relative;
+  width: clamp(23.4375rem, 16.3732rem + 30.1408vw, 43.5rem);
+  margin-bottom: 50px;
+  border: 2px solid var(--border-color);
+  color: var(--font-color);
+  background-color: var(--background-color);
+}
+
+.header__title {
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 23px;
+  text-transform: uppercase;
+  margin-bottom: 23px;
+}
+
+.label {
+  position: relative;
+  margin: 0;
+}
+
+.labelText {
+  position: absolute;
+  mix-blend-mode: hard-light;
+  max-width: 280px;
+  top: 25px;
+  right: 25px;
+  opacity: 0.5;
+  font-family: var(--font-pixel_style), arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+@supports (-webkit-text-stroke: 1px var(--background-color)) {
+  .labelText {
+    -webkit-text-stroke: 1px var(--background-color);
+  }
+}
+
+.header__text {
+  font-family: var(--font-pixel_style), arial, sans-serif;
+  font-weight: 400;
+  line-height: 65px;
+  margin-bottom: 20px;
+  margin-top: 136px;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+}
+
+.section_block:last-child {
+  margin-bottom: 0;
+}
+
+.blockTitle {
+  align-self: self-start;
+  font-size: 18px;
+  padding: 5px 10px 5px 10px;
+}
+
+.blockText {
+  margin-left: 23px;
+  margin-right: 23px;
+  margin-top: 26px;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.blockText:last-of-type {
+  margin-bottom: 25px;
+}
+
+.blockButtons {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 25px;
+  margin-right: 25px;
+  gap: 5px;
+}
+
+.img {
+  display: block;
+  object-position: center;
+  object-fit: cover;
+  width: 100%;
+  height: 700px;
+  border-top: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.card__icon-button {
+  height: 38px;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: grid;
+  align-items: end;
+  border: 2px solid transparent;
+}
+
+.card__like-button:focus {
+  box-shadow: 2px 2px;
+  outline: none;
+}
+
+.save-button:focus {
+  box-shadow: 2px 2px;
+  outline: none;
+}
+
+.card__icon-button:focus .card__like-button{
+  box-shadow: 2px 2px;
+  outline: none;
+}
+
+.card__like-button {
+  position: relative;
+  font-family: var(--font-pixel_style), arial, sans-serif;
+  padding: 9px 17px;
+  width: 130px;
+  height: 38px;
+  background: var(--background-color);
+  border: 2px solid var(--border-color);
+  z-index: 1;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-pixel_style), arial, sans-serif; ;
+  color: var(--font-color);
+}
+
+.floppy {
+  max-width: 21px;
+  height: 21px;
+  color: var(--text-color-inverse);
+  mix-blend-mode: difference;
+}
+
+.dialog[open] {
+  display: flex;
+}
+
+.dialog {
+  background: var(--background-color);
+  border: 2px solid var(--border-color);
+  width: 357px;
+  height: 193px;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.dialog-form .floppy {
+  max-width: 39px;
+  height: 39px;
+}
+
+.dialog::backdrop {
+  background:  #000000;
+  opacity: 0.75;
+}
+
+.container_for_dialog-text {
+  display: flex;
+  gap: 20px;
+}
+
+.container_for_dialog-text .floppy {
+  align-self: center;
+}
+
+.header__theme-menu {
+  transform: translateX(9px);
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.theme-menu__item {
+  position: relative;
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus {
+  outline: 0;
+  opacity: 0.6;
+}
+
+.theme-menu__button {
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+}
+
+.theme-menu__button:hover {
+  position: relative;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.theme-menu__button::after {
+  display: block;
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.5s ease;
+}
+
+.theme-menu__button:focus::after {
+  width: 100%;
+}
+
+.theme-menu__button:active::after {
+  width: 0;
+}
+
+.card__like-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 35px;
+  background: linear-gradient(to right, var(--border-color), var(--border-color));
+  transition: all 1s;
+  z-index: 0;
+}
+
+.card__like-button:hover::before {
+  width: 100%;
+  cursor: pointer;
+}
+
+.dialog-form {
+  color: var(--text-color-inverse);
+}
+
+.submit__text {
+  position: relative;
+  z-index: 1;
+  width: 293px;
+  height: 38px;
+  background: var(--background-color);
+  border: 2px solid var(--border-color);
+}
+
+.submit__text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 37px;
+  background: linear-gradient(to right, var(--border-color), var(--border-color));
+  transition: all 1s;
+  z-index: 0;
+}
+
+.submit__text:hover::before {
+  width: 100%;
+}
+
+.save-button {
+  width: 335px;
+  height: 55px;
+  margin-bottom: 103px;
+  margin-top: 50px;
+  font-size: 14px;
+  position: relative;
+  font-family: var(--font-pixel_style), arial, sans-serif;
+  background: var(--background-color);
+  border: 2px solid var(--border-color);
+  z-index: 1;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.blockButtons .button__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 12.6px;
+}
+
+.dialog .button__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.button__text {
+  line-height: 21px;
+  color: var(--text-color-inverse);
+  mix-blend-mode: difference;
+  font-weight: 400;
+}
+
+.save-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 52px;
+  background: linear-gradient(to right, var(--border-color), var(--border-color));
+  transition: all 1s;
+  z-index: 0;
+}
+
+.save-button:hover::before {
+  width: 100%;
+}
+
+@media (width <= 376px) {
+
+  .header__text {
+    line-height: 49px;
+    margin-top: 120px;
+  }
+
+  .header__title {
+    font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+    line-height: 14px;
+  }
+
+  .save-button {
+    display: flex;
+    flex-direction: column;
+    width: 306px;
+    height: 84px;
+  }
+
+  .floppy {
+    align-self: center;
+    max-width: 28px;
+    height: 28px;
+  }
+
+  .save-button .button__text {
+    align-self: center;
+  }
+
+  .header {
+    max-width: 371px;
+    min-height: 323px;
+  }
+
+  .article {
+    width: 100vh;
+    max-width: 375px;
+  }
+
+  .img {
+    max-height: 375px;
+  }
+
+  .save-button::before {
+    height: 80px;
+  }
+
+  .submit__text {
+    width: 257px;
+  }
+
+  .button__text {
+    font-size: 14px;
+  }
+
+  .dialog .button__text {
+    line-height: 21px;
+  }
+
+  .labelText {
+    top: 78px;
+    right: 10px;
+  }
 }
