@@ -39,7 +39,7 @@
   font-family: var(--font-pixel_style), arial, sans-serif;
   background-color: var(--background-color);
   margin-top: 102px;
-  margin-bottom: 102px;
+  margin-bottom: 100px;
   width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
   min-height: 367px;
 }
@@ -47,13 +47,13 @@
 .article {
   position: relative;
   width: clamp(23.4375rem, 16.3732rem + 30.1408vw, 43.5rem);
-  margin-bottom: 50px;
+  margin-bottom: 51px;
   border: 2px solid var(--border-color);
   color: var(--font-color);
   background-color: var(--background-color);
 }
 
-.header__title {
+.headerTitle {
   font-size: 23px;
   font-weight: 400;
   line-height: 23px;
@@ -85,7 +85,7 @@
   }
 }
 
-.header__text {
+.headerText {
   font-family: var(--font-pixel_style), arial, sans-serif;
   font-weight: 400;
   line-height: 65px;
@@ -98,6 +98,9 @@
   margin-bottom: 0;
 }
 
+.block {
+  padding: 25px 25px;
+}
 .blockTitle {
   align-self: self-start;
   font-size: 18px;
@@ -105,15 +108,13 @@
 }
 
 .blockText {
-  margin-left: 23px;
-  margin-right: 23px;
-  margin-top: 26px;
+  margin-bottom: 26px;
   font-size: 18px;
   line-height: 21px;
 }
 
 .blockText:last-of-type {
-  margin-bottom: 25px;
+  margin-bottom: 0;
 }
 
 .blockButtons {
@@ -224,7 +225,7 @@
 }
 
 .header__theme-menu {
-  transform: translateX(9px);
+  transform: translateX(10px);
 }
 
 .theme-menu__list {
@@ -332,7 +333,6 @@
   width: 335px;
   height: 55px;
   margin-bottom: 103px;
-  margin-top: 50px;
   font-size: 14px;
   position: relative;
   font-family: var(--font-pixel_style), arial, sans-serif;
@@ -384,12 +384,12 @@
 
 @media (width <= 376px) {
 
-  .header__text {
+  .headerText {
     line-height: 49px;
     margin-top: 120px;
   }
 
-  .header__title {
+  .headerTitle {
     font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
     line-height: 14px;
   }
@@ -413,7 +413,7 @@
 
   .header {
     max-width: 371px;
-    min-height: 323px;
+    min-height: 326px;
   }
 
   .article {
@@ -442,7 +442,7 @@
   }
 
   .labelText {
-    top: 78px;
-    right: 10px;
+    top: 25px;
+    right: 12px;
   }
 }
