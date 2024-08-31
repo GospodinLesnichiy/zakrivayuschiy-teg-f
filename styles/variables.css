@@ -3,6 +3,11 @@
     --border-color: var(--border-color), #00cc14;
     --font-color: var(--font-color), #00cc14;
     --background-color: var(--background-color), #000;
+    --background-color-inverse: #00cc14;
+    --text-color-inverse: #00cc14;
+    --background-gradient-image: repeating-linear-gradient(to right, #000 0 2px, rgb(211 211 211 / 0) 2px 4px),
+    repeating-linear-gradient(to bottom, #000 0 2px, rgb(211 211 211 / 0) 2px 4px),
+    linear-gradient(#007f0c 0.01%, #004306);
     --font-pixel_style: 'PressStart2P-Regular', sans-serif;
     --font-regular: 'Inter-Variable', sans-serif;
     --like-color: #FF0000;

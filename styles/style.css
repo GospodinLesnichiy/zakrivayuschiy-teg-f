@@ -82,6 +82,7 @@
 @supports (-webkit-text-stroke: 1px var(--background-color)) {
   .labelText {
     -webkit-text-stroke: 1px var(--background-color);
+    z-index: 1;
   }
 }
 
@@ -133,6 +134,34 @@
   height: 700px;
   border-top: 2px solid var(--border-color);
   border-bottom: 2px solid var(--border-color);
+}
+
+.gray {
+  filter: grayscale(80%);
+}
+
+.saturate {
+  filter: saturate(350%);
+}
+
+.hue-rotate {
+  filter: hue-rotate(25deg);
+}
+
+.invert {
+  filter: invert(80%);
+}
+
+.sepia {
+  filter: sepia(90%);
+}
+
+.blur {
+  filter: blur(17px);
+}
+
+.green {
+  filter: hue-rotate(85deg) blur(2px) opacity(77%) grayscale(30%);
 }
 
 .card__icon-button {

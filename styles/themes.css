@@ -42,7 +42,7 @@
         --font-color: #000000;
         --border-color: #000000;
         --background-color: #FFFFFF;
-        --text-color-inverse: #000000;
+        --text-color-inverse: #FFF;
         --background-gradient-image: repeating-linear-gradient(to right, #d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px),
         repeating-linear-gradient(to bottom, #d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px),
         linear-gradient(#e7e7e7 0.01%, #1a1a1a);
